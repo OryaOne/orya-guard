@@ -1,0 +1,5 @@
+customer_id,score,status,constant_feature
+1,10,active,yes
+2,,active,yes
+2,,active,yes
+3,10,active,yes

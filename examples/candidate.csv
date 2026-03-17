@@ -1,0 +1,7 @@
+user_id,age,income,city,is_premium
+7,24,51000,athens,True
+8,31,,athens,False
+9,27,,volos,False
+10,52,120000,patras,True
+11,48,110000,volos,True
+12,45,115000,athens,False

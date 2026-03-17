@@ -1,0 +1,7 @@
+{
+  "customer_id": 42,
+  "age": 31,
+  "city": "athens",
+  "income": 58000.5,
+  "is_premium": false
+}

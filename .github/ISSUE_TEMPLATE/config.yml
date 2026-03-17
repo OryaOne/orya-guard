@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and fit checks
+    url: https://github.com/OryaOne/orya-guard/discussions
+    about: Use GitHub Discussions for questions or to check whether an idea fits the project.
