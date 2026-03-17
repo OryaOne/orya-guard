@@ -1,11 +1,18 @@
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pandas as pd
 from typer.testing import CliRunner
 
 from orya_guard.cli import app
+
+ANSI_ESCAPE_PATTERN = re.compile(r"\x1b\[[0-9;?]*[A-Za-z]")
+
+
+def _plain_text(output: str) -> str:
+    return ANSI_ESCAPE_PATTERN.sub("", output)
 
 
 def test_check_dataset_cli_writes_markdown_report(
@@ -92,11 +99,12 @@ def test_inference_payload_cli_fails_for_invalid_payload(
 
 def test_cli_help_uses_preferred_report_flag_name(cli_runner: CliRunner) -> None:
     result = cli_runner.invoke(app, ["check-dataset", "--help"])
+    help_text = _plain_text(result.stdout)
 
     assert result.exit_code == 0
-    assert "--report" in result.stdout
-    assert ".csv" in result.stdout
-    assert ".parquet" in result.stdout
+    assert "--report" in help_text
+    assert ".csv" in help_text
+    assert ".parquet" in help_text
 
 
 def test_cli_reports_missing_dataset_file_clearly(cli_runner: CliRunner) -> None:
