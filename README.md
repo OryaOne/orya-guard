@@ -1,4 +1,8 @@
 # orya-guard
+[![CI](https://github.com/OryaOne/orya-guard/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/OryaOne/orya-guard/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](./pyproject.toml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+
 
 **Preflight validation for ML datasets and inference payloads.**
 
@@ -425,4 +429,4 @@ Good contributions for this project:
 
 ## 📄 License
 
-MIT. See the project metadata in [`pyproject.toml`](./pyproject.toml).
+This project is licensed under the MIT License. See [`LICENSE`](./LICENSE).
